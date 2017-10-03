@@ -14,6 +14,12 @@ namespace Messenger.Client.Objects
 
         public override string SettingType => "call_to_actions";
 
+	     [JsonProperty("locale")]
+	     public string Locale{ get; set; }
+        
+        [JsonProperty("composer_input_disabled")]
+        public bool ComposerInputDisabled{ get; set; }
+
         [JsonProperty("call_to_actions")]
         public ICollection<MessengerCallToAction> CallToActions { get; set; }
 
